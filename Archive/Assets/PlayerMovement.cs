@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
+        //Debug.Log("Flipping");
+
     }
 
 

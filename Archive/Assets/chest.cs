@@ -32,10 +32,16 @@ public class chest : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2d(Collider2D coll)
+    /*void OnTriggerEnter2D(Collider2D coll)
     {
         Debug.Log("I'm here!");
         Instantiate(fact, transform.position + new Vector3(position, 0f, 0f), Quaternion.identity);
-    }
+    }*/
+
+    void OnCollisionEnter(UnityEngine.Collision collisionInfo)
+    {
+        //print climate fact
+        Debug.Log ("We hit the chest");
+    }    
 
 }

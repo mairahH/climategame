@@ -28,13 +28,20 @@ public class Enemy : MonoBehaviour
         
     }*/
 
+    int collisioncounter = 0;
+
     // Update is called once per frame
 
     void OnCollisionEnter(Collision other)
+    //void OnCollisionEnter(UnityEngine.Collision collisionInfo)
     {
+        collisioncounter++;
         //if (other.CompareTag("Player"))
         //{
+
+        if(collisioncounter>=3){
             DestroyFire();
+        } 
         //}
     }
 
@@ -81,4 +88,10 @@ public class Enemy : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
+    /*void OnCollisionEnter(UnityEngine.Collision collisionInfo)
+    {
+        //print climate fact
+        Debug.Log ("We hit the fire");
+    } */
 }
