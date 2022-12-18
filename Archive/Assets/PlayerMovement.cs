@@ -11,9 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 3f;
     private bool isFacingRight = true;
 
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+
+
     /*
     // Start is called before the first frame update
     void Start()
