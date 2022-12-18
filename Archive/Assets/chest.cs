@@ -6,7 +6,7 @@ public class chest : MonoBehaviour
 {
 
     //[SerializeField] private Rigidbody2D rb;
-     public GameObject fact;
+    public GameObject fact;
     private Transform player;
     private Vector2 target;
 
@@ -32,8 +32,9 @@ public class chest : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider coll)
+    void OnTriggerEnter2d(Collider2D coll)
     {
+        Debug.Log("I'm here!");
         Instantiate(fact, transform.position + new Vector3(position, 0f, 0f), Quaternion.identity);
     }
 

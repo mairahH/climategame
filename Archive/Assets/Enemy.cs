@@ -30,12 +30,12 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
 
-    void OnTriggerEnter2d(Collider2D other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
-        {
+        //if (other.CompareTag("Player"))
+        //{
             DestroyFire();
-        }
+        //}
     }
 
     void DestroyFire()
